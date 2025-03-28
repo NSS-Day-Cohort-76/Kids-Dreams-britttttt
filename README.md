@@ -35,10 +35,47 @@ Make sure your Developer Tools are open at all times while working on this proje
 Before you click the "Complete Assessment" button on the Learning Platform, add your answers below each question and make a commit.
 
 1. When a child is clicked on in the browser, which module contains the code that will execute on that event happening? Can you explain the algorithm of that logic?
-   > Your answer here
+   > Kids.js contains the code that executes when the name is clicked on in the browser. 
+
+   > We are using the method of addEventListener to monitor the DOM and when the targeted element we declared is clicked, that is when the code is executed. 
+   
+
 2. In the **Pairings** module, why must the `findCelebrityMatch()` function be invoked inside the `for..of` loop that iterates the kids array?
-   > Your answer here
+
+   > The  findCelebrityMatch() function must be invoked in the for of loop because we are iterating through the array of children objects. 
+   
+   >Each  child object has a property of celebrityId that corresponds to the id property of each celebrity object.
+   
+   >So, we use the findCelebrityMatch function in the for.. of loop to iterate through the array of childObject and to check if it is true that their property of celebrityId matches the id of the celebrity.id 
+
 3. In the **CelebrityList** module, can you describe how the name of the sport that the celebrity plays can be displayed in the window alert text?
-   > Your answer here
+   
+   > Yes. Boom, question answered.
+
+
+
+
+
+
+
+
+
+
+
+   > Just kidding, we are using our event listener method to listen to the dom and waiting for a user to click the element we targeted.
+   
+   > In this case, it is the data-type of "celebrity" we specified in our Celebrities function that renders the HTML.
+
+   >  When the specific element("celebrity") we singled out on the dom is clicked,  a for of  loop executes that iterates through all of celebrities objects
+
+   > Our if condition checks to see if variable of celebrityId and celebrity.id match
+   
+   > if they match (meaning the condition is true), a window alert will execute that contains which has the value of data.sport  which we targeted by creating a variable that has the value of the clickevent target and uses dot notation to pull the data attribution of data-sport
+
+
 4. Can you describe, in detail, the algorithm that is in the `main` module?
-   > Your answer here
+   > We want to render HTML dynamically to our DOM, so we declare the variable of mainContainer which has the value of the document.querySelector method that is selecting the id of container in our index.html document
+
+   > Our entire index.HTML body has the id of container, so our main. js will insert our dynamically generated html code on page load
+
+   >our main.js module invokes our Kids(), Celebrities(), and Pairings() functions that will will iterate through the specified arrays of objects, and insert the appropriate values and return the html
